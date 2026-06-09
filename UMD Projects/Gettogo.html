@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get To Go</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+    <!-- =============================== -->
+    <!-- 🖱️ Custom Cursor -->
+    <!-- =============================== -->
+    <div class="cursor"></div>
+
+    <!-- =============================== -->
+    <!-- 💎 Status Badge -->
+    <!-- =============================== -->
+    <div class="status-badge">Available for work</div>
+
+    <!-- =============================== -->
+    <!-- 🔝 Header -->
+    <!-- =============================== -->
+    <header class="header">
+
+        <nav class="nav">
+
+            <a href="../index.html" class="logo">
+                <img src="../TS Logo.png" alt="Tamilselvan Logo" />
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="mailto:suryatamil51@gmail.com">
+                        Mail
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/tamilselvan-sadhasivam-98036a3a2/" target="_blank">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.behance.net/suryatamiluiuxdesign" target="_blank">
+                        Behance
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/Suryatamil51" target="_blank">
+                        GitHub
+                    </a>
+                </li>
+
+            </ul>
+            <button class="hamburger-toggle" type="button" aria-label="Open contact links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-contact-menu" aria-label="Contact links">
+                <a href="mailto:suryatamil51@gmail.com">Mail</a>
+                <a href="https://www.linkedin.com/in/tamilselvan-sadhasivam-98036a3a2/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/Suryatamil51" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.behance.net/suryatamiluiuxdesign" target="_blank"
+                    rel="noopener noreferrer">Behance</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- =============================== -->
+    <!-- 🔙 Back Navigation -->
+    <!-- =============================== -->
+    <a href="../Uncover my design.html" class="back-btn">
+        ← Back Selected Works
+    </a>
+
+    <!-- =============================== -->
+    <!-- 🚀 HERO -->
+    <!-- =============================== -->
+    <section class="project-hero">
+
+        <div class="project-container">
+
+            <h1 class="project-title">
+                GET TO GO
+            </h1>
+
+            <p class="project-meta">
+                2024 &nbsp; | &nbsp; UI/UX Design &nbsp; | &nbsp;
+                Transportation Booking App
+            </p>
+
+            <img src="../Screen Design/Get To Go.png" alt="Get To Go App" class="project-hero-img">
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- 📌 OVERVIEW -->
+    <!-- =============================== -->
+    <section class="project-section">
+
+        <div class="project-container">
+
+            <h2 class="section-title">
+                Overview
+            </h2>
+
+            <p class="section-text">
+                Get To Go is a smart travel and transportation mobile application designed to simplify daily commuting
+                through a rechargeable travel card system and seamless digital ticket management. The platform allows
+                users to recharge cards, manage travel expenses, track journeys, and access transportation services
+                through a unified and user-friendly mobile experience.
+            </p>
+
+            <p class="section-text">
+                This project was developed over four months as part of my UI/UX learning journey, involving extensive
+                research, user analysis, wireframing, prototyping, and end-to-end mobile application design. The goal
+                was to create a modern transit experience that reduces friction in public transportation while improving
+                accessibility, convenience, and everyday usability for commuters.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- 🧑‍💻 MY ROLE -->
+    <!-- =============================== -->
+    <section class="project-section">
+
+        <div class="project-container">
+
+            <h2 class="section-title">
+                My Role
+            </h2>
+
+            <p class="section-text">
+                I independently handled the complete UI/UX design process — from initial research and user journey
+                mapping to wireframing, visual design, and interactive mobile app flows. The project focused on solving
+                real-world commuting challenges through intuitive interactions, structured information architecture, and
+                scalable design systems.
+            </p>
+
+            <ul class="role-list">
+
+                <li>
+                    User research and transportation workflow analysis
+                </li>
+
+                <li>
+                    Competitor study and feature planning
+                </li>
+
+                <li>
+                    User persona and journey mapping
+                </li>
+
+                <li>
+                    Information architecture and app flow creation
+                </li>
+
+                <li>
+                    Wireframing and low-fidelity prototyping
+                </li>
+
+                <li>
+                    High-fidelity mobile UI design
+                </li>
+
+                <li>
+                    Travel card recharge and payment flow design
+                </li>
+
+                <li>
+                    Dashboard, ticketing, and schedule experience design
+                </li>
+
+                <li>
+                    Design system and visual consistency
+                </li>
+
+                <li>
+                    User-centered interaction and usability planning
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- ⬆️ Floating Back To Top Button -->
+    <!-- =============================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- =============================== -->
+    <!-- 🖱️ Cursor Script -->
+    <!-- =============================== -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector(".nav");
+            const menuButton = document.querySelector(".hamburger-toggle");
+            const mobileMenu = document.querySelector(".mobile-contact-menu");
+
+            if (!nav || !menuButton || !mobileMenu) return;
+
+            menuButton.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("menu-open");
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+            });
+
+            mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("menu-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                });
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!nav.classList.contains("menu-open")) return;
+                if (nav.contains(event.target)) return;
+
+                nav.classList.remove("menu-open");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+
+        const cursor = document.querySelector('.cursor');
+
+        let mouseX = 0,
+            mouseY = 0;
+
+        let cursorX = 0,
+            cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+        });
+
+        function animateCursor() {
+
+            cursorX += (mouseX - cursorX) * 0.25;
+            cursorY += (mouseY - cursorY) * 0.25;
+
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+
+            requestAnimationFrame(animateCursor);
+
+        }
+
+        animateCursor();
+
+        const hoverElements = document.querySelectorAll(
+            'a, .logo, .status-badge'
+        );
+
+        hoverElements.forEach(el => {
+
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+
+        });
+
+        if ('ontouchstart' in window) {
+
+            cursor.style.display = 'none';
+
+        }
+
+    </script>
+
+    <!-- =============================== -->
+    <!-- 💡 Back to top button -->
+    <!-- =============================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const backToTopBtn = document.getElementById("backToTop");
+            const sections = document.querySelectorAll("section");
+            let currentMode = "";
+
+            function getBrightness(rgb) {
+                const [r, g, b] = rgb.match(/\d+/g).map(Number);
+                return (r * 299 + g * 587 + b * 114) / 1000;
+            }
+
+            function updateBackToTopState() {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+
+                const btnRect = backToTopBtn.getBoundingClientRect();
+                const btnCenterY = btnRect.top + btnRect.height / 2;
+
+                let activeSection = null;
+                for (const section of sections) {
+                    const rect = section.getBoundingClientRect();
+                    if (btnCenterY >= rect.top && btnCenterY <= rect.bottom) {
+                        activeSection = section;
+                        break;
+                    }
+                }
+
+                if (!activeSection) return;
+
+                const bgColor = window.getComputedStyle(activeSection).backgroundColor;
+                const brightness = getBrightness(bgColor);
+                const isDark = brightness < 128;
+
+                if (isDark && currentMode !== "dark") {
+                    backToTopBtn.classList.add("on-dark");
+                    currentMode = "dark";
+                } else if (!isDark && currentMode !== "light") {
+                    backToTopBtn.classList.remove("on-dark");
+                    currentMode = "light";
+                }
+            }
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            window.addEventListener("scroll", updateBackToTopState);
+            window.addEventListener("resize", updateBackToTopState);
+            updateBackToTopState();
+        });
+    </script>
+
+</body>
+
+</html>

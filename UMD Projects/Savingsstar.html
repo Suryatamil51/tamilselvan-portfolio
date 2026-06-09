@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saving Star</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+    <!-- =============================== -->
+    <!-- 🖱️ Custom Cursor -->
+    <!-- =============================== -->
+    <div class="cursor"></div>
+
+    <!-- =============================== -->
+    <!-- 💎 Status Badge -->
+    <!-- =============================== -->
+    <div class="status-badge">Available for work</div>
+
+    <!-- =============================== -->
+    <!-- 🔝 Header -->
+    <!-- =============================== -->
+    <header class="header">
+
+        <nav class="nav">
+
+            <a href="../index.html" class="logo">
+                <img src="../TS Logo.png" alt="Tamilselvan Logo" />
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="mailto:suryatamil51@gmail.com">
+                        Mail
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/tamilselvan-sadhasivam-98036a3a2/" target="_blank">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.behance.net/suryatamiluiuxdesign" target="_blank">
+                        Behance
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/Suryatamil51" target="_blank">
+                        GitHub
+                    </a>
+                </li>
+
+            </ul>
+            <button class="hamburger-toggle" type="button" aria-label="Open contact links" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="mobile-contact-menu" aria-label="Contact links">
+                <a href="mailto:suryatamil51@gmail.com">Mail</a>
+                <a href="https://www.linkedin.com/in/tamilselvan-sadhasivam-98036a3a2/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/Suryatamil51" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.behance.net/suryatamiluiuxdesign" target="_blank"
+                    rel="noopener noreferrer">Behance</a>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- =============================== -->
+    <!-- 🔙 Back Navigation -->
+    <!-- =============================== -->
+    <a href="../index.html" class="back-btn">
+        ← Back Home
+    </a>
+
+    <!-- =============================== -->
+    <!-- 🚀 HERO -->
+    <!-- =============================== -->
+    <section class="project-hero">
+
+        <div class="project-container">
+
+            <h1 class="project-title">
+                SAVING STAR
+            </h1>
+
+            <p class="project-meta">
+                2024 &nbsp; | &nbsp; UI/UX Design &nbsp; | &nbsp;
+                Finance Management Mobile App
+            </p>
+
+            <img src="../Screen Design/Saving Star.png" alt="Saving Star App" class="project-hero-img">
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- 📌 OVERVIEW -->
+    <!-- =============================== -->
+    <section class="project-section">
+
+        <div class="project-container">
+
+            <h2 class="section-title">
+                Overview
+            </h2>
+
+            <p class="section-text">
+                Saving Star is a personal savings and financial management mobile application designed to help users
+                build better saving habits through goal-based planning and intuitive money tracking. The platform
+                enables users to manage savings goals, monitor financial progress, and organize expenses through a
+                simple and user-friendly mobile experience.
+            </p>
+
+            <p class="section-text">
+                This project focused on creating a clean and approachable fintech experience that simplifies personal
+                finance management for everyday users. The goal was to design an interface that balances usability,
+                trust, and clarity while encouraging consistent financial engagement through structured user flows and
+                accessible interactions.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- 🧑‍💻 MY ROLE -->
+    <!-- =============================== -->
+    <section class="project-section">
+
+        <div class="project-container">
+
+            <h2 class="section-title">
+                My Role
+            </h2>
+
+            <p class="section-text">
+                I independently handled the complete UI/UX design process — from research and user flow planning to
+                wireframing and high-fidelity mobile interface design. The focus was on building a modern fintech
+                experience that feels simple, organized, and visually engaging for users managing their financial goals.
+            </p>
+
+            <ul class="role-list">
+
+                <li>
+                    User research and competitor analysis
+                </li>
+
+                <li>
+                    User persona and journey mapping
+                </li>
+
+                <li>
+                    Financial goal and savings flow planning
+                </li>
+
+                <li>
+                    Wireframing and low-fidelity prototyping
+                </li>
+
+                <li>
+                    High-fidelity mobile UI design
+                </li>
+
+                <li>
+                    Dashboard and transaction experience design
+                </li>
+
+                <li>
+                    Design system and visual consistency
+                </li>
+
+                <li>
+                    User-centered interaction and usability planning
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- =============================== -->
+    <!-- ⬆️ Floating Back To Top Button -->
+    <!-- =============================== -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        ↑
+    </button>
+
+    <!-- =============================== -->
+    <!-- 🖱️ Cursor Script -->
+    <!-- =============================== -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const nav = document.querySelector(".nav");
+            const menuButton = document.querySelector(".hamburger-toggle");
+            const mobileMenu = document.querySelector(".mobile-contact-menu");
+
+            if (!nav || !menuButton || !mobileMenu) return;
+
+            menuButton.addEventListener("click", () => {
+                const isOpen = nav.classList.toggle("menu-open");
+                menuButton.setAttribute("aria-expanded", String(isOpen));
+            });
+
+            mobileMenu.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    nav.classList.remove("menu-open");
+                    menuButton.setAttribute("aria-expanded", "false");
+                });
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!nav.classList.contains("menu-open")) return;
+                if (nav.contains(event.target)) return;
+
+                nav.classList.remove("menu-open");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+        });
+
+
+        const cursor = document.querySelector('.cursor');
+
+        let mouseX = 0,
+            mouseY = 0;
+
+        let cursorX = 0,
+            cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+        });
+
+        function animateCursor() {
+
+            cursorX += (mouseX - cursorX) * 0.25;
+            cursorY += (mouseY - cursorY) * 0.25;
+
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+
+            requestAnimationFrame(animateCursor);
+
+        }
+
+        animateCursor();
+
+        const hoverElements = document.querySelectorAll(
+            'a, .logo, .status-badge'
+        );
+
+        hoverElements.forEach(el => {
+
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+            });
+
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+
+        });
+
+        if ('ontouchstart' in window) {
+
+            cursor.style.display = 'none';
+
+        }
+
+    </script>
+
+    <!-- =============================== -->
+    <!-- 💡 Back to top button -->
+    <!-- =============================== -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const backToTopBtn = document.getElementById("backToTop");
+            const sections = document.querySelectorAll("section");
+            let currentMode = "";
+
+            function getBrightness(rgb) {
+                const [r, g, b] = rgb.match(/\d+/g).map(Number);
+                return (r * 299 + g * 587 + b * 114) / 1000;
+            }
+
+            function updateBackToTopState() {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add("show");
+                } else {
+                    backToTopBtn.classList.remove("show");
+                }
+
+                const btnRect = backToTopBtn.getBoundingClientRect();
+                const btnCenterY = btnRect.top + btnRect.height / 2;
+
+                let activeSection = null;
+                for (const section of sections) {
+                    const rect = section.getBoundingClientRect();
+                    if (btnCenterY >= rect.top && btnCenterY <= rect.bottom) {
+                        activeSection = section;
+                        break;
+                    }
+                }
+
+                if (!activeSection) return;
+
+                const bgColor = window.getComputedStyle(activeSection).backgroundColor;
+                const brightness = getBrightness(bgColor);
+                const isDark = brightness < 128;
+
+                if (isDark && currentMode !== "dark") {
+                    backToTopBtn.classList.add("on-dark");
+                    currentMode = "dark";
+                } else if (!isDark && currentMode !== "light") {
+                    backToTopBtn.classList.remove("on-dark");
+                    currentMode = "light";
+                }
+            }
+
+            backToTopBtn.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            window.addEventListener("scroll", updateBackToTopState);
+            window.addEventListener("resize", updateBackToTopState);
+            updateBackToTopState();
+        });
+    </script>
+
+</body>
+
+</html>
