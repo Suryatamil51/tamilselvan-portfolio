@@ -497,8 +497,9 @@
       const toolsBox = document.getElementById("toolsBox");
       const hint = toolsBox.querySelector(".hover-hint");
 
-      const isTouchDevice =
-        window.matchMedia("(hover: none), (pointer: coarse)").matches;
+      const isTouchDevice = () => {
+        return window.matchMedia("(hover: none), (pointer: coarse)").matches || window.innerWidth <= 1024;
+      };
 
       // Hide hint if already seen
       if (sessionStorage.getItem("hintSeen")) {
@@ -520,7 +521,7 @@
       // Mobile tap
       toolsBox.addEventListener("click", () => {
 
-        if (!isTouchDevice) return;
+        if (!isTouchDevice()) return;
 
         toolsBox.classList.toggle("is-active");
 
@@ -534,7 +535,7 @@
       document.addEventListener("click", (e) => {
 
         if (
-          isTouchDevice &&
+          isTouchDevice() &&
           toolsBox.classList.contains("is-active") &&
           !toolsBox.contains(e.target)
         ) {
@@ -547,7 +548,7 @@
 
       window.addEventListener("scroll", () => {
 
-        if (!isTouchDevice) return;
+        if (!isTouchDevice()) return;
 
         // If user scrolls even slightly
         if (Math.abs(window.scrollY - lastScroll) > 5) {

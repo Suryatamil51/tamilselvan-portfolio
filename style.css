@@ -1660,9 +1660,9 @@ footer .footer-text {
   }
 }
 
-/* Tools box: disable hover animation on mobile */
-@media (hover: none) and (pointer: coarse) {
-  .tools-box:hover .corner-icon {
+/* Tools box: disable hover animation on mobile/tablet/iPad */
+@media (max-width: 1024px) {
+  .tools-box:not(.is-active):hover .corner-icon {
     animation: none;
     opacity: 0;
     transform: scale(0.8);
@@ -1674,11 +1674,11 @@ footer .footer-text {
   }
 
   .desktop-hint {
-    display: none;
+    display: none !important;
   }
 
   .mobile-hint {
-    display: inline;
+    display: inline !important;
   }
 }
 
