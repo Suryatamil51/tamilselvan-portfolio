@@ -1582,8 +1582,8 @@ footer .footer-text {
 /* 📱 MOBILE & TABLET RESPONSIVENESS FIX */
 /* =============================== */
 
-/* Disable custom cursor on touch devices */
-@media (hover: none) and (pointer: coarse) {
+/* Disable custom cursor on touch devices and mobile/tablet views */
+@media (hover: none) and (pointer: coarse), (max-width: 1024px) {
   .cursor {
     display: none !important;
   }

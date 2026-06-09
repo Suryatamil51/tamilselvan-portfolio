@@ -886,7 +886,7 @@ img {
     }
 }
 
-@media (hover: none) and (pointer: coarse) {
+@media (hover: none) and (pointer: coarse), (max-width: 1024px) {
     .cursor {
         display: none !important;
     }

@@ -368,6 +368,11 @@
       el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
     });
 
+    // Optional: hide cursor on touch devices
+    if ('ontouchstart' in window) {
+      cursor.style.display = 'none';
+    }
+
     // Smooth scrolling (UNCHANGED)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
