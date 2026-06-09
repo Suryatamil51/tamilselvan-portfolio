@@ -1255,48 +1255,50 @@ img {
 }
 
 /* Individual Platform Hover Background and Glowing Shadows */
-.contact-link[href^="mailto:"]:hover {
-  background: #f4f4f5 !important;
-  border-color: #f4f4f5 !important;
-  color: #0a0a0a !important;
-  transform: scale(1.22) translateY(-6px) !important;
-  box-shadow:
-    0 10px 25px rgba(255, 255, 255, 0.25),
-    0 4px 10px #0a0a0a !important;
-  z-index: 10;
-}
+@media (hover: hover) {
+  .contact-link[href^="mailto:"]:hover {
+    background: #f4f4f5 !important;
+    border-color: #f4f4f5 !important;
+    color: #0a0a0a !important;
+    transform: scale(1.22) translateY(-6px) !important;
+    box-shadow:
+      0 10px 25px rgba(255, 255, 255, 0.25),
+      0 4px 10px #0a0a0a !important;
+    z-index: 10;
+  }
 
-.contact-link[href*="linkedin.com"]:hover {
-  background: #0077b5 !important;
-  border-color: #0077b5 !important;
-  color: #f4f4f5 !important;
-  transform: scale(1.22) translateY(-6px) !important;
-  box-shadow:
-    0 10px 25px rgba(0, 119, 181, 0.45),
-    0 4px 10px #0a0a0a !important;
-  z-index: 10;
-}
+  .contact-link[href*="linkedin.com"]:hover {
+    background: #0077b5 !important;
+    border-color: #0077b5 !important;
+    color: #f4f4f5 !important;
+    transform: scale(1.22) translateY(-6px) !important;
+    box-shadow:
+      0 10px 25px rgba(0, 119, 181, 0.45),
+      0 4px 10px #0a0a0a !important;
+    z-index: 10;
+  }
 
-.contact-link[href*="behance.net"]:hover {
-  background: #0057ff !important;
-  border-color: #0057ff !important;
-  color: #f4f4f5 !important;
-  transform: scale(1.22) translateY(-6px) !important;
-  box-shadow:
-    0 10px 25px rgba(0, 87, 255, 0.45),
-    0 4px 10px #0a0a0a !important;
-  z-index: 10;
-}
+  .contact-link[href*="behance.net"]:hover {
+    background: #0057ff !important;
+    border-color: #0057ff !important;
+    color: #f4f4f5 !important;
+    transform: scale(1.22) translateY(-6px) !important;
+    box-shadow:
+      0 10px 25px rgba(0, 87, 255, 0.45),
+      0 4px 10px #0a0a0a !important;
+    z-index: 10;
+  }
 
-.contact-link[href*="github.com"]:hover {
-  background: #0a0a0a !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  color: #f4f4f5 !important;
-  transform: scale(1.22) translateY(-6px) !important;
-  box-shadow:
-    0 10px 25px rgba(255, 255, 255, 0.15),
-    0 4px 10px rgba(0, 0, 0, 0.2) !important;
-  z-index: 10;
+  .contact-link[href*="github.com"]:hover {
+    background: #0a0a0a !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #f4f4f5 !important;
+    transform: scale(1.22) translateY(-6px) !important;
+    box-shadow:
+      0 10px 25px rgba(255, 255, 255, 0.15),
+      0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    z-index: 10;
+  }
 }
 
 .contact-icon {
@@ -1358,9 +1360,11 @@ img {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
-.contact-link:hover .contact-tooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1);
+@media (hover: hover) {
+  .contact-link:hover .contact-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
 }
 
 /* Dot indicator below hovered item */
@@ -1395,9 +1399,11 @@ img {
   background: #f4f4f5 !important;
 }
 
-.contact-link:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
+@media (hover: hover) {
+  .contact-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 @media (max-width: 767px) {
@@ -1765,7 +1771,6 @@ footer .footer-text {
     letter-spacing: normal !important;
   }
 
-  .contact-link:hover,
   .contact-link:active {
     transform: none !important;
     background: #fafafa !important;
@@ -2388,7 +2393,6 @@ footer .footer-text {
     box-sizing: border-box !important;
   }
 
-  .contact-link:hover,
   .contact-link:active {
     transform: none !important;
     background: #fafafa !important;
@@ -2700,7 +2704,6 @@ footer .footer-text {
     box-sizing: border-box !important;
   }
 
-  .contact-link:hover,
   .contact-link:active {
     transform: none !important;
     background: #fafafa !important;
