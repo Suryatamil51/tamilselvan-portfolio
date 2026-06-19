@@ -474,6 +474,101 @@
     });
   </script>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const nav = document.querySelector(".nav");
+      const navLinks = document.querySelectorAll(".nav-links a");
+      const underline = document.querySelector(".nav-underline");
+      const sections = Array.from(document.querySelectorAll("section"));
+
+      if (!nav || !underline || !navLinks.length || !sections.length) return;
+
+      // Move underline to active link
+      function moveUnderline(link) {
+        if (!link) return;
+
+        navLinks.forEach(navLink => navLink.classList.remove("active"));
+        link.classList.add("active");
+
+        const linkRect = link.getBoundingClientRect();
+        const navRect = nav.getBoundingClientRect();
+
+        underline.style.width = `${linkRect.width}px`;
+        underline.style.transform =
+          `translateX(${linkRect.left - navRect.left}px)`;
+      }
+
+      // Detect active section while scrolling
+      function updateActiveLinkByScroll() {
+
+        const headerOffset = 80;
+        const probeY = headerOffset + window.innerHeight * 0.4;
+
+        let activeSection = sections[0];
+
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+
+          if (rect.top <= probeY) {
+            activeSection = section;
+          }
+        });
+
+        const activeLink = document.querySelector(
+          `.nav-links a[href="#${activeSection.id}"]`
+        );
+
+        moveUnderline(activeLink);
+      }
+
+      // Click navigation
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          moveUnderline(link);
+        });
+      });
+
+      // Scroll update
+      window.addEventListener(
+        "scroll",
+        updateActiveLinkByScroll,
+        { passive: true }
+      );
+
+      // Resize update
+      window.addEventListener("resize", () => {
+        updateActiveLinkByScroll();
+      });
+
+      // Initial page load
+      async function initializeUnderline() {
+
+        // Wait until fonts are loaded
+        if (document.fonts) {
+          await document.fonts.ready;
+        }
+
+        requestAnimationFrame(() => {
+          updateActiveLinkByScroll();
+        });
+
+        // Extra safeguard for slow rendering
+        setTimeout(() => {
+          updateActiveLinkByScroll();
+        }, 100);
+
+        setTimeout(() => {
+          updateActiveLinkByScroll();
+        }, 300);
+      }
+
+      // Run after everything loads
+      window.addEventListener("load", initializeUnderline);
+
+    });
+  </script>
+
 
   <!-- =============================== -->
   <!-- Service Animation -->
